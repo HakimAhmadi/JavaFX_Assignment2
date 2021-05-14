@@ -8,11 +8,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DigitalClockController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DigitalClockController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="95.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
@@ -20,9 +22,9 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label fx:id="CurrentTime" text="Label" GridPane.columnIndex="1" />
-      <ComboBox fx:id="HourBox" prefHeight="26.0" prefWidth="88.0" promptText="Hour" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <ComboBox fx:id="MinBox" prefHeight="26.0" prefWidth="75.0" promptText="Min" visibleRowCount="10" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="CurrentTime" text="Label" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+      <ComboBox fx:id="HourBox" prefHeight="26.0" prefWidth="80.0" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox fx:id="MinBox" prefHeight="26.0" prefWidth="75.0" promptText="0" visibleRowCount="10" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Label prefHeight="33.0" prefWidth="96.0" text="SetAlarmTo" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="10.0" />
@@ -32,5 +34,11 @@
             <Insets left="10.0" />
          </GridPane.margin></Label>
       <ImageView fx:id="image" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Hour" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Min" GridPane.columnIndex="4" GridPane.rowIndex="1" />
    </children>
 </GridPane>

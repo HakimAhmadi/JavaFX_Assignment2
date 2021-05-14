@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" stylesheets="@mainStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1000.0">
+         <children>
+            <JFXTextArea fx:id="textReader" editable="false" layoutX="123.0" layoutY="20.0" prefHeight="120.0" prefWidth="557.0" style="-fx-text-fill: white;"/>
+            <ProgressBar fx:id="TimeBar" layoutX="724.0" layoutY="80.0" prefHeight="20.0" prefWidth="143.0" progress="0.0" />
+            <Label layoutX="729.0" layoutY="55.0" prefHeight="20.0" prefWidth="134.0" text="Time Remaining">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+            <Label layoutX="760.0" layoutY="112.0" text="5 Min" />
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1000.0">
+         <children>
+            <JFXTextArea fx:id="textWriter" editable="false" layoutX="122.0" prefHeight="150.0" prefWidth="557.0" style="-fx-text-fill: white;"/>
+            <ProgressIndicator fx:id="ProgressBar" layoutX="735.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="100.0" progress="0.0" />
+            <JFXButton layoutX="735.0" layoutY="90.0" mnemonicParsing="false" onAction="#StartPressed" prefWidth="100.0" text="Start"  />
+         </children>
+      </AnchorPane>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="179.0" prefWidth="900.0" stylesheets="@buttonStyle.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="493.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="906.0" minWidth="10.0" prefWidth="110.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="47.0" text="~">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="caps" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Caps" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="tap" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="Tap" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="ctrl" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" text="ctrl" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="shift" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="70.0" text="Shift" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="one" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="1" GridPane.columnIndex="1" />
+            <JFXButton fx:id="q" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Q" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="two" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="2" GridPane.columnIndex="2" />
+            <JFXButton fx:id="f" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="F" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="d" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="D" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="r" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="R" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <JFXButton fx:id="four" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="4" GridPane.columnIndex="4" />
+            <JFXButton fx:id="e" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="E" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXButton fx:id="s" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="S" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="w" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="W" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXButton fx:id="a" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="A" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="three" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="3" GridPane.columnIndex="3" />
+            <JFXButton fx:id="g" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="G" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="t" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="T" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <JFXButton fx:id="five" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="5" GridPane.columnIndex="5" />
+            <JFXButton fx:id="six" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="6" GridPane.columnIndex="6" />
+            <JFXButton fx:id="y" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="Y" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <JFXButton fx:id="n" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="N" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="seven" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="7" GridPane.columnIndex="7" />
+            <JFXButton fx:id="m" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="M" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="h" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="H" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="ctrl2" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="65.0" text="ctrl" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="3.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="space" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="400.0" text="Space" GridPane.columnIndex="2" GridPane.columnSpan="6" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="alt2" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="alt" GridPane.columnIndex="8" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="b" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="B" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="v" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="V" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="alt" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="alt" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="X" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" fx:id="xBotton">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="z" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="Z" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="zero" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="0" GridPane.columnIndex="10" />
+            <JFXButton fx:id="nine" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="9" GridPane.columnIndex="9" />
+            <JFXButton fx:id="backslash" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="/" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="i" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="I" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <JFXButton fx:id="o" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="O" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <JFXButton fx:id="comma" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="," GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="dot" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="." GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="k" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="K" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="u" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="U" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <JFXButton fx:id="j" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="J" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="plus" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="+" GridPane.columnIndex="12" />
+            <JFXButton fx:id="minus" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="-" GridPane.columnIndex="11" />
+            <JFXButton fx:id="forword" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="\\" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+            <JFXButton fx:id="backspace" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" text="Backspace" GridPane.columnIndex="13" />
+            <JFXButton fx:id="shift2" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="80.0" text="Shift" GridPane.columnIndex="11" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="quote" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="&quot;" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="semi" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text=";" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="l" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="L" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="openbracket" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="[" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+            <JFXButton fx:id="p" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="P" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <JFXButton fx:id="enter" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Enter" GridPane.columnIndex="12" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></JFXButton>
+            <JFXButton fx:id="closebracket" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="]" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+            <JFXButton fx:id="eight" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="8" GridPane.columnIndex="8" />
+            <JFXButton fx:id="c" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="C" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </JFXButton>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

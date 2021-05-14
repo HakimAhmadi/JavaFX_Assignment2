@@ -79,6 +79,9 @@ public class DigitalClockController implements Initializable {
 
     @Override
     public void initialize (URL url, ResourceBundle rb) {
+
+        System.out.println(HourBox.getValue());
+        System.out.println(MinBox.getValue());
         Timeline timeline = new Timeline (new KeyFrame (Duration.millis (1000),
                 new EventHandler<ActionEvent>() {
                     @Override
@@ -87,9 +90,13 @@ public class DigitalClockController implements Initializable {
                         String txt = String.format ("% 02d:% 02d:% 02d", now.getHour (), now.getMinute (), now.getSecond ());
                         CurrentTime.setText (txt);
 
-                        if ((alarmTimeInMin() == clockTimeInMin())) {
-                            image.setVisible(true);
-                            animateNode(image);
+                        try {
+                            if ((alarmTimeInMin() == clockTimeInMin())) {
+                                image.setVisible(true);
+                                animateNode(image);
+                            }
+                        }catch (NullPointerException e){
+                            System.out.println("No time selected");
                         }
                     }
                 }
@@ -114,12 +121,12 @@ public class DigitalClockController implements Initializable {
         CurrentTime.setText (txt);
 
         MinBox.getItems().addAll(
-                        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+                        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
                         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
                         43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
                 );
 
-        HourBox.getItems().addAll(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        HourBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
                         20, 21, 22, 23);
 
 
@@ -134,8 +141,15 @@ public class DigitalClockController implements Initializable {
     }
 
     private int alarmTimeInMin() {
-        int hours = HourBox.getValue();
-        return MinBox.getValue() + hours * 60;
+        int hours;
+        int min;
+        if (HourBox.getValue() >= 0){hours= HourBox.getValue();}
+        else{hours=0;}
+
+        if (MinBox.getValue() >= 0){min = MinBox.getValue();}
+        else {min=0;}
+
+        return min + hours * 60;
     }
 
     private int clockTimeInMin() {

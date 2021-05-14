@@ -24,14 +24,11 @@ public class Controller implements Initializable {
         slider.valueProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<?extends Number> observable, Number oldValue, Number newValue){
                 ds.setOffsetY(newValue.floatValue());
-                ds.setOffsetX(newValue.floatValue());DropShadow ds = new DropShadow();
+                ds.setOffsetX(newValue.floatValue());
+
                 ds.setColor(Color.GRAY);
                 Rectangle.setEffect(ds);
             }
         });
-
-
-
-
     }
 }

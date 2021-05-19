@@ -167,7 +167,7 @@ public class Controller implements Initializable {
 
             if (event.getCode() == KeyCode.SPACE) {
                 String[] WriterLen = textWriter.getText().split(" ");
-                
+
                 if (Arrays.equals(WriterLen, Arrays.copyOfRange(ReaderLen, 0, WriterLen.length))){
 
                     int wordLen =0;

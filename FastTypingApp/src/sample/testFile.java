@@ -9,17 +9,9 @@ public class testFile {
 
         String string = "Hello World? hellow world";
 
-        System.out.println(string.length());
-        String[] list= string.split(" ");
+        for (int i=0;i<6;i++) {
 
-        String s = "Hello World?";
-        String [] sLen = s.split(" ");
-        System.out.println(Arrays.toString(Arrays.copyOfRange(list, 0, sLen.length)));
-        System.out.println(Arrays.toString(sLen));
-
-
-        if (Arrays.equals(sLen, Arrays.copyOfRange(list, 0, sLen.length))){
-            System.out.println(sLen);
+            System.out.println(Math.toRadians(i * 360 / 6)+" Sin "+Math.sin(Math.toRadians(i * 360 / 6)));
         }
 
     }
